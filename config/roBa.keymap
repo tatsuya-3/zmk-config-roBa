@@ -91,10 +91,10 @@
 
         NUM {
             bindings = <
-&trans  &trans          &kp UP_ARROW    &trans           &trans                      &kp PAGE_UP    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans      &trans  &kp PAGE_DOWN  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans
-&trans  &trans          &trans          &trans           &trans  &trans      &trans  &kp NUMBER_0   &kp NUMBER_1     &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
-&trans  &trans          &trans          &trans           &trans  &trans      &trans  &trans                                                            &trans
+&trans  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &trans                      &kp PAGE_UP    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+&trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans      &trans  &kp PAGE_DOWN  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
+&trans  &trans           &trans          &trans           &trans  &trans      &trans  &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&trans  &trans           &trans          &trans           &trans  &trans      &trans  &trans                                                   &trans
             >;
         };
 
