@@ -73,6 +73,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        LT_RPT: LT_RPT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_RPT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -80,10 +91,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W                      &kp E     &kp R         &kp T                                                            &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S                      &kp D     &kp F         &kp G          &kp LS(LG(S))             &kp SLASH               &kp H        &kp J  &kp K      &lt 5 L  &kp ENTER
-&mt LEFT_SHIFT Z  &kp X                      &kp C     &kp V         &kp B          &kp A                     &kp SEMICOLON           &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &lt_to_layer_0 6 LEFT_WIN  &kp CLCK  &kp LEFT_ALT  &kp BACKSPACE  &lt_to_layer_0 3 DEL      &lt_to_layer_0 1 SPACE  &lt 2 SPACE                             &kp LS(LG(S))
+&kp Q             &kp W                      &kp E     &kp R         &kp T                                                     &kp Y            &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S                      &kp D     &kp F         &kp G          &kp LS(LG(S))      &kp SLASH               &kp H            &kp J  &kp K      &kp L    &LT_RPT 4 ENTER
+&mt LEFT_SHIFT Z  &kp X                      &kp C     &kp V         &kp B          &kp A              &kp SEMICOLON           &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &lt_to_layer_0 6 LEFT_WIN  &kp CLCK  &kp LEFT_ALT  &kp BACKSPACE  &LT_RPT 3 DEL      &lt_to_layer_0 1 SPACE  &LT_RPT 2 SPACE                             &kp LS(LG(S))
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -101,7 +112,7 @@
         CODE {
             bindings = <
 &kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                           &kp PLUS         &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS
-&kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &trans  &kp EXCLAMATION  &kp DOLLAR        &kp PERCENT           &kp AMPERSAND          &kp RIGHT_BRACKET
+&trans     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &trans  &kp EXCLAMATION  &kp DOLLAR        &kp PERCENT           &kp AMPERSAND          &kp LEFT_BRACKET
 &trans     &trans           &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans  &kp UNDERSCORE   &kp EXCL          &kp DOUBLE_QUOTES     &kp HASH               &kp RIGHT_BRACKET
 &trans     &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                                          &kp PIPE
             >;
