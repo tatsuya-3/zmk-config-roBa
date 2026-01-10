@@ -11,6 +11,7 @@
 &trackball {
     //マウスのオートレイヤーを無効化する
     //automouse-layer = <4>; 20260110
+
     scroll-layers = <5>;
 
     // arrows {
@@ -63,6 +64,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        Pass: Pass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1 &kp NUMBER_4 &kp T &kp A &kp NUMBER_2 &kp NUMBER_8 &kp UNDERSCORE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5>;
+            label = "PASS";
+        };
     };
 
     behaviors {
@@ -106,7 +114,7 @@
 &trans  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &trans                      &kp PAGE_UP    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp AT
 &trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans      &trans  &kp PAGE_DOWN  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMICOLON
 &trans  &trans           &trans          &trans           &trans  &trans      &trans  &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COLON
-&trans  &trans           &trans          &trans           &trans  &trans      &trans  &trans                                                   &trans
+&trans  &trans           &trans          &trans           &trans  &trans      &trans  &trans                                                   &Pass
             >;
         };
 
@@ -121,10 +129,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1            &kp F2  &kp F3  &kp F4  &kp F5                      &kp F6  &kp F7  &kp F8             &kp F9            &kp F10
-&trans            &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp RIGHT_CONTROL  &kp PLUS          &kp F11
-&kp LEFT_SHIFT    &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LESS_THAN      &kp GREATER_THAN  &kp F12
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                               &trans
+&kp F1            &kp F2          &kp F3          &kp F4           &kp F5                      &kp F6  &kp F7  &kp F8             &kp F9            &kp F10
+&trans            &trans          &kp UP_ARROW    &trans           &trans  &trans      &trans  &trans  &trans  &kp RIGHT_CONTROL  &kp PLUS          &kp F11
+&kp LEFT_SHIFT    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans      &trans  &trans  &trans  &kp LESS_THAN      &kp GREATER_THAN  &kp F12
+&kp LEFT_CONTROL  &trans          &trans          &trans           &trans  &trans      &trans  &trans                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
