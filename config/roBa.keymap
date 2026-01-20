@@ -109,7 +109,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "LT_MOUSESCROLL";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&mmv MOVE_DOWN>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <3>;
         };
@@ -142,7 +142,7 @@
             bindings = <
 &kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                           &kp PLUS         &kp SINGLE_QUOTE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS
 &trans     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &trans  &kp EXCLAMATION  &kp DOLLAR        &kp PERCENT           &kp AMPERSAND          &kp LEFT_BRACKET
-&trans     &trans           &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans  &kp UNDERSCORE   &kp EXCL          &kp DOUBLE_QUOTES     &kp HASH               &kp RIGHT_BRACKET
+&trans     &trans           &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans  &kp UNDERSCORE   &kp EXCL          &trans                &kp HASH               &kp RIGHT_BRACKET
 &trans     &trans           &trans           &trans           &trans        &trans                       &trans  &trans                                                                          &kp PIPE
             >;
         };
