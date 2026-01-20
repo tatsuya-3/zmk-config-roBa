@@ -104,6 +104,15 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        LT_MOUSESCROLL: LT_MOUSESCROLL {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "LT_MOUSESCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&mmv MOVE_DOWN>;
+
+            tap-ms = <3>;
+        };
     };
 
     keymap {
@@ -117,7 +126,7 @@
 &kp LCTRL         &lt_to_layer_0 6 LEFT_WIN  &kp CLCK  &kp LEFT_ALT  &kp BACKSPACE  &LT_RPT 3 DEL      &lt_to_layer_0 1 SPACE  &LT_RPT 2 SPACE                             &kp LS(LG(S))
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&LT_MOUSESCROLL>;
         };
 
         NUM {
