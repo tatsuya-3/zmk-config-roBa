@@ -43,7 +43,7 @@
 
         muhennkann {
             bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+            key-positions = <23 24>;
         };
 
         double_quotation {
@@ -68,7 +68,7 @@
         Pass: Pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_1 &kp NUMBER_4 &kp T &kp A &kp NUMBER_2 &kp NUMBER_8 &kp UNDERSCORE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5>;
+            bindings = <&kp NUMBER_1 &kp NUMBER_4 &kp T &kp A &kp NUMBER_2 &kp NUMBER_8 &kp UNDERSCORE &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6>;
             label = "PASS";
         };
     };
@@ -93,6 +93,17 @@
             quick-tap-ms = <175>;
             flavor = "tap-preferred";
         };
+
+        LT_CLICK: LT_CLICK {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_CLICK";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <0>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -101,8 +112,8 @@
         default_layer {
             bindings = <
 &kp Q             &kp W                      &kp E     &kp R         &kp T                                                     &kp Y            &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S                      &kp D     &kp F         &kp G          &kp LS(LG(S))      &kp SLASH               &kp H            &kp J  &kp K      &kp L    &LT_RPT 4 ENTER
-&mt LEFT_SHIFT Z  &kp X                      &kp C     &kp V         &kp B          &kp A              &kp SEMICOLON           &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp A             &kp S                      &kp D     &kp F         &kp G          &kp LS(LG(S))      &kp LEFT_BRACKET        &kp H            &kp J  &kp K      &kp L    &LT_RPT 4 ENTER
+&mt LEFT_SHIFT Z  &kp X                      &kp C     &kp V         &kp B          &kp A              &kp RIGHT_BRACKET       &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &lt_to_layer_0 6 LEFT_WIN  &kp CLCK  &kp LEFT_ALT  &kp BACKSPACE  &LT_RPT 3 DEL      &lt_to_layer_0 1 SPACE  &LT_RPT 2 SPACE                             &kp LS(LG(S))
             >;
 
@@ -111,10 +122,10 @@
 
         NUM {
             bindings = <
-&trans  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &trans                      &kp PAGE_UP    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp AT
-&trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans      &trans  &kp PAGE_DOWN  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMICOLON
-&trans  &trans           &trans          &trans           &trans  &trans      &trans  &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COLON
-&trans  &trans           &trans          &trans           &trans  &trans      &trans  &kp ESCAPE                                               &Pass
+&trans  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &trans                             &kp PAGE_UP    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp AT
+&trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans      &kp SEMICOLON  &kp PAGE_DOWN  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON
+&trans  &trans           &trans          &trans           &trans  &trans      &trans         &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp UNDERSCORE
+&trans  &trans           &trans          &trans           &trans  &trans      &trans         &kp ESCAPE                                               &Pass
             >;
         };
 
@@ -140,10 +151,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &LT_CLICK 5 MB3  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                       &trans
             >;
         };
 
