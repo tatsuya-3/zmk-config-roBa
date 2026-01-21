@@ -122,7 +122,7 @@
             bindings = <
 &kp Q             &kp W                      &kp E      &kp R         &kp T                                                     &kp Y            &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S                      &kp D      &kp F         &kp G          &kp LS(LG(S))      &kp RIGHT_BRACKET       &kp H            &kp J  &kp K      &kp L    &LT_RPT 4 ENTER
-&mt LEFT_SHIFT Z  &kp X                      &kp C      &kp V         &kp B          &kp MINUS          &kp NON_US_BSLH         &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_SHIFT Z  &kp X                      &kp C      &kp V         &kp B          &kp MINUS          &kp NON_US_HASH         &kp N            &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp LCTRL         &lt_to_layer_0 6 LEFT_WIN  &kp GRAVE  &kp LEFT_ALT  &kp BACKSPACE  &LT_RPT 3 DEL      &lt_to_layer_0 1 SPACE  &LT_RPT 2 SPACE                             &kp LS(LG(S))
             >;
 
@@ -141,10 +141,12 @@
         CODE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                          &kp PLUS              &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp MINUS
-&trans  &trans  &trans  &trans  &trans  &kp LC(LA(KP_NUMBER_0))      &kp EQUAL  &kp LS(SINGLE_QUOTE)  &kp DOLLAR        &kp PERCENT       &kp AMPERSAND     &kp LEFT_BRACKET
+&trans  &trans  &trans  &trans  &trans  &kp LC(LA(KP_NUMBER_0))      &kp EQUAL  &kp LS(SINGLE_QUOTE)  &kp DOLLAR        &kp PERCENT       &kp LS(NUMBER_6)  &kp LEFT_BRACKET
 &trans  &trans  &trans  &trans  &trans  &trans                       &kp INT3   &kp LS(NUMBER_2)      &kp EXCL          &kp LS(NUMBER_2)  &kp HASH          &kp RIGHT_BRACKET
-&trans  &trans  &trans  &trans  &trans  &trans                       &trans     &trans                                                                      &kp PIPE
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans     &trans                                                                      &kp INT3
             >;
+
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         FUNCTION {
