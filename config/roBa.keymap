@@ -126,7 +126,7 @@
 &kp LCTRL         &lt_to_layer_0 6 LEFT_WIN  &kp GRAVE  &kp LEFT_ALT  &kp BACKSPACE  &LT_RPT 3 DEL      &lt_to_layer_0 1 SPACE  &LT_RPT 2 SPACE                             &kp LS(LG(S))
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
         };
 
         NUM {
@@ -162,10 +162,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB2  &LT_CLICK 5 MB3  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                       &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans              &trans    &trans                   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1            &mkp MB2  &LT_CLICK 5 MB3          &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(LEFT_ARROW)  &trans    &kp LA(LS(RIGHT_ARROW))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                         &trans
             >;
         };
 
