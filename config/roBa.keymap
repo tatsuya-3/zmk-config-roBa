@@ -68,7 +68,7 @@
         Pass: Pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_1 &kp NUMBER_4 &kp T &kp A &kp NUMBER_2 &kp NUMBER_8 &kp LS(INT1) &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6>;
+            bindings = <&kp NUMBER_1 &kp NUMBER_4 &kp T &kp A &kp NUMBER_2 &kp NUMBER_8 &kp LS(INT1) &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp N7>;
             label = "PASS";
         };
     };
@@ -126,7 +126,7 @@
 &kp LCTRL         &lt_to_layer_0 6 LEFT_WIN  &kp GRAVE  &kp LEFT_ALT  &kp BACKSPACE  &LT_RPT 3 DEL      &lt_to_layer_0 1 SPACE  &LT_RPT 2 SPACE                             &kp LS(LG(S))
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         NUM {
